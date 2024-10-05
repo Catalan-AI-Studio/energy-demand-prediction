@@ -28,7 +28,7 @@ This project is currently being worked on of Saturday, Sept 7, 2024.
 - What happens to the mix of gas, solar, & hydro generation over the year?
 - Is electricity demand projected to increase year over year?
 
-## What am I looking for?
+## What are we looking for?
 - A set of automated prompts [python code] that can be used to convert outputs/artifacts from your regression model + parts of raw/ processed data that can be fed into an LLM.
 - An intuition for what works, what doesn't work?
 - What questions can LLMs answer that I haven't thought of?
