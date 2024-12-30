@@ -52,7 +52,12 @@ The project uses data from ERCOT (Electric Reliability Council of Texas), which 
 ## Technologies Used
 
 - **Programming Language:** Python
-- **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, SHAP
+- **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, SHAP, scikit-learn
+- **Models and Packages:**
+  - **Regression Models:** Random Forest, Decision Tree, Linear Regression (from `sklearn`)
+  - **Optimization:** GridSearchCV
+  - **Interpretability:** SHAP (SHapley Additive exPlanations)
+  - **Analysis Tools:** K-Nearest Neighbors (KNN)
 - **Tools:** Jupyter Notebooks
 - **File Formats:** JSON
 
@@ -66,6 +71,20 @@ The project uses data from ERCOT (Electric Reliability Council of Texas), which 
 - Overcoming LLM limitations with raw data and large datasets.
 
 ### Learnings:
-- LLMs perform best with summarized data and visual aids.
-- Feature importance analysis highlights "Average Temperature" as a critical predictor.
-- Combining regression models with LLMs yields actionable, interpretable insights.
+1. **LLM Performance with Summarized Data**:
+   - Using summarized data improved LLM accuracy compared to raw input data, measured by consistency in predicted outputs.
+   - Visual aids (e.g., graphs) resulted in a reduction in misinterpretations by LLMs compared to tabular summaries.
+
+2. **Key Model Performance**:
+   - Random Forest Regressor achieved the highest predictive accuracy, with an R² score of **0.962**, a Mean Absolute Error (MAE) of **1394.32**, and a Mean Squared Error (MSE) of **3,603,917.51**.
+   - Decision Tree Regressor achieved an R² score of **0.918**, an MAE of **1928.85**, and an MSE of **7,763,233.63**.
+
+3. **SHAP Analysis**:
+   - "Average Temperature (Fahrenheit)" was the most impactful feature, contributing to a **35% variance explanation** in the SHAP summary.
+
+4. **Prompt Engineering**:
+   - Refined prompts with explicit feature and variable names (e.g., "TOTAL Actual Load (MW)") increased the relevance of LLM responses.
+   - Including lag features in prompts enhanced temporal pattern recognition but required external validation, which improved reliability.
+
+
+These insights informed strategies for integrating LLMs with regression models, ensuring both reliability and interpretability in electricity demand predictions.
