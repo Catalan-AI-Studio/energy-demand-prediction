@@ -85,6 +85,3 @@ The project uses data from ERCOT (Electric Reliability Council of Texas), which 
 4. **Prompt Engineering**:
    - Refined prompts with explicit feature and variable names (e.g., "TOTAL Actual Load (MW)") increased the relevance of LLM responses.
    - Including lag features in prompts enhanced temporal pattern recognition but required external validation, which improved reliability.
-
-
-These insights informed strategies for integrating LLMs with regression models, ensuring both reliability and interpretability in electricity demand predictions.
